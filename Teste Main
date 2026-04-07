@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        Conta c = new Conta();
+        ContaCorrente cc = new ContaCorrente();
+        ContaPoupanca cp = new ContaPoupanca();
+        c.deposita((double)1000.0F);
+        cc.deposita((double)1000.0F);
+        cp.deposita((double)1000.0F);
+        c.atualiza(0.01);
+        cc.atualiza(0.01);
+        cp.atualiza(0.01);
+        System.out.println("Conta: " + c.getSaldo());
+        System.out.println("Conta Corrente: " + cc.getSaldo());
+        System.out.println("Conta Poupança: " + cp.getSaldo());
+    }
+}
