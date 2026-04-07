@@ -1,0 +1,24 @@
+class Conta {
+    private double saldo;
+
+    void deposita(double x) {
+        this.saldo += x;
+    }
+
+    boolean retira(double x) {
+        if (this.saldo >= x) {
+            this.saldo -= x;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    double getSaldo() {
+        return this.saldo;
+    }
+
+    void atualiza(double taxaSelic) {
+        this.saldo *= (double)1.0F + taxaSelic;
+    }
+}
