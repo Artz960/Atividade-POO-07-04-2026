@@ -1,0 +1,27 @@
+class AtualizadorDeContas {
+    private double saldoTotal = 0;
+    private double selic;
+
+    AtualizadorDeContas(double selic) {
+        this.selic = selic;
+    }
+
+    void roda(Conta c) {
+        double saldoAnterior = c.getSaldo();
+
+        c.atualiza(this.selic);
+
+        double saldoNovo = c.getSaldo();
+
+        System.out.println("Saldo anterior: " + saldoAnterior);
+        System.out.println("Saldo atualizado: " + saldoNovo);
+        System.out.println("--------------------------");
+
+        this.saldoTotal += saldoNovo;
+    }
+
+    double getSaldoTotal() {
+        return this.saldoTotal;
+    }
+}
+thur0249
