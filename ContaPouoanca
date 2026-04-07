@@ -1,0 +1,7 @@
+class ContaPoupanca extends Conta {
+    void atualiza(double taxaSelic) {
+        double novoSaldo = this.getSaldo() * ((double)1.0F + taxaSelic * (double)0.75F);
+        this.retira(this.getSaldo());
+        this.deposita(novoSaldo);
+    }
+}
