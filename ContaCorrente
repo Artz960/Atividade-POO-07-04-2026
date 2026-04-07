@@ -1,0 +1,8 @@
+class ContaCorrente extends Conta {
+    void atualiza(double taxaSelic) {
+        double novoSaldo = this.getSaldo() * ((double)1.0F + taxaSelic * (double)2.0F);
+        novoSaldo -= (double)15.0F;
+        this.retira(this.getSaldo());
+        this.deposita(novoSaldo);
+    }
+}
